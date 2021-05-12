@@ -57,3 +57,5 @@ tags
 
 # Apple Mac custom attributes file for a folder
 .DS_Store
+/package-lock.json
+/.idea/
