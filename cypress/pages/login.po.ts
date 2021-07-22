@@ -1,7 +1,7 @@
-import {AbstractPo} from "./abstract.po";
+import {AbstractPage} from "./abstract.po";
 
 
-export class LoginPage extends AbstractPo {
+export class LoginPage extends AbstractPage {
     /**
      * Selectors for page elements should be added here
      */
@@ -23,6 +23,10 @@ export class LoginPage extends AbstractPo {
      */
     open () {
         cy.visit('/app/login')
+    }
+
+    verifyLogin () {
+        cy.url().should('include','app')
     }
 }
 
