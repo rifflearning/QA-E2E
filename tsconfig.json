@@ -8,7 +8,7 @@
         "noImplicitAny": true,
         "strictPropertyInitialization": true,
         "strictNullChecks": true,
-        "types": ["node", "webdriverio/async", "cypress"]
+        "types": ["node", "webdriverio/async", "cypress", "cypress-xpath"]
     },
     "include": [
       "./**/*.ts",

@@ -1,6 +1,8 @@
 import {UserType} from "../types/user.type";
 
-export const getUserDefaultUser = (): UserType => ({
+//This is test user info, that's not sensitive data
+//TODO: for actual users please use .env approach
+export const getUserDefaultData = (): UserType => ({
     username: "taras+1@riffanalytics.ai",
-    password: "12341234"
+    password: "12341234",
 })
