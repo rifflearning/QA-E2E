@@ -1,4 +1,4 @@
-import {getUserDefaultData} from "../fixtures/user-data";
+import {getUserDefaultData, getUserInvalidData} from "../fixtures/user.data";
 import {LoginPage} from "../pages/login.po";
 import {ProfilePage} from "../pages/profile.po";
 
@@ -12,6 +12,14 @@ describe("Login tests", () => {
         loginPage.login(loginData.username, loginData.password);
         loginPage.verifyLogin();
     })
+
+    it.only('Login with invalid user credentials', () => {
+        const loginData = getUserInvalidData();
+        loginPage.open();
+        loginPage.login(loginData.username, loginData.password);
+        loginPage.verifyErrorInSignIn();
+    })
+
 
     it('Logout with default user', () => {
         const loginData = getUserDefaultData();
