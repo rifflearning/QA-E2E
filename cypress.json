@@ -1,3 +1,6 @@
 {
-    "baseUrl": "https://dev-jitsi.riffplatform.com/"
+    "baseUrl": "https://dev-jitsi.riffplatform.com/",
+    "env": {
+        "testEmail": "chcdz.test@inbox.testmail.app"
+    }
 }

@@ -1,7 +1,8 @@
 import {AbstractPage} from "./abstract.po";
+import {UnauthorizedPage} from "./unauthorized.po";
 
 
-export class LoginPage extends AbstractPage {
+export class LoginPage extends UnauthorizedPage {
     /**
      * Selectors for page elements should be added here
      */
@@ -27,6 +28,11 @@ export class LoginPage extends AbstractPage {
 
     verifyLogin () {
         cy.url().should('include','app')
+    }
+
+    verifyErrorInSignIn () {
+        cy.url().should('include','app/login')
+        cy.get('[type="submit"] + p').should('contain.text', 'Error in SignIn')
     }
 }
 

@@ -2,7 +2,12 @@
   "name": "qa-e2e",
   "version": "1.0.0",
   "dependencies": {
-    "cypress": "^7.6.0"
+    "@types/faker": "^5.5.7",
+    "cypress": "^7.6.0",
+    "cypress-dotenv": "^1.2.2",
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "nodemailer": "^6.6.3"
   },
   "description": "Riff Learning E2E project",
   "main": "index.js",
