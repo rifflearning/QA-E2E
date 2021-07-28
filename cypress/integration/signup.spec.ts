@@ -12,7 +12,7 @@ describe('Sign-up Tests', () => {
        signUpPage.verifySignUpMessage();
    })
 
-    it.only('Sign Up with Verification', () => {
+    it('Sign Up with Verification', () => {
         const signUpData = signupDataWithConfirmationEmail();
         signUpPage.open();
         signUpPage.completeSignUp(signUpData);
