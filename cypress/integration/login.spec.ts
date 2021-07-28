@@ -13,7 +13,7 @@ describe("Login tests", () => {
         loginPage.verifyLogin();
     })
 
-    it.only('Login with invalid user credentials', () => {
+    it('Login with invalid user credentials', () => {
         const loginData = getUserInvalidData();
         loginPage.open();
         loginPage.login(loginData.username, loginData.password);

@@ -19,7 +19,8 @@
     "typescript": "^4.3.4"
   },
   "scripts": {
-    "cypress": "npx cypress open"
+    "cypress": "npx cypress open",
+    "test": "cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
