@@ -11,6 +11,7 @@ describe("Login tests", () => {
         loginPage.open();
         loginPage.login(loginData.username, loginData.password);
         loginPage.verifyLogin();
+        profilePage.verifyUserInfo(loginData.name, loginData.username)
     })
 
     it('Login with invalid user credentials', () => {

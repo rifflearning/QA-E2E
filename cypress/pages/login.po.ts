@@ -1,4 +1,3 @@
-import {AbstractPage} from "./abstract.po";
 import {UnauthorizedPage} from "./unauthorized.po";
 
 
