@@ -1,8 +1,9 @@
 import {SignUpPage} from "../pages/sign-up.po";
 import {signupData, signupDataWithConfirmationEmail} from "../fixtures/signup.data";
-import {Timeout} from "../fixtures/enums/timeout.enum";
+import {ProfilePage} from "../pages/profile.po";
 
 const signUpPage = new SignUpPage();
+const profilePage = new ProfilePage();
 
 describe('Sign-up Tests', () => {
    it('Sign Up with correct data', () => {
@@ -16,7 +17,8 @@ describe('Sign-up Tests', () => {
         const signUpData = signupDataWithConfirmationEmail();
         signUpPage.open();
         signUpPage.completeSignUp(signUpData);
-        signUpPage.verifyEmailForSignUp(signUpData)
+        signUpPage.verifyEmailForSignUp(signUpData);
+        profilePage.verifyUserInfo(signUpData.name, signUpData.email);
     })
 });
 

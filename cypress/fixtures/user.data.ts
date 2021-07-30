@@ -6,6 +6,7 @@ import * as faker from "faker";
 export const getUserDefaultData = (): UserType => ({
     username: "taras+1@riffanalytics.ai",
     password: "12341234",
+    name: "Taras 1"
 })
 
 export const getUserInvalidData = (): UserType => ({
