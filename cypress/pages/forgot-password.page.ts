@@ -1,4 +1,4 @@
-import {UnauthorizedPage} from "./unauthorized.po";
+import {UnauthorizedPage} from "./unauthorized.page";
 import {Timeout} from "../fixtures/enums/timeout.enum";
 import {Messages} from "../fixtures/enums/messages.enum";
 

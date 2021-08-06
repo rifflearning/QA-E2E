@@ -1,12 +1,12 @@
-import {SignUpPage} from "../pages/sign-up.po";
+import {SignUpPage} from "../pages/sign-up.page";
 import {signupData, signupDataWithConfirmationEmail} from "../fixtures/signup.data";
-import {ProfilePage} from "../pages/profile.po";
+import {ProfilePage} from "../pages/profile.page";
 
 const signUpPage = new SignUpPage();
 const profilePage = new ProfilePage();
 
 describe('Sign-up Tests', () => {
-   it('Sign Up with correct data', () => {
+   it.skip('Sign Up with correct data', () => {
        const signUpData = signupData();
        signUpPage.open();
        signUpPage.completeSignUp(signUpData);

@@ -1,4 +1,4 @@
-import {ForgotPasswordPage} from "../pages/forgot-password.po";
+import {ForgotPasswordPage} from "../pages/forgot-password.page";
 import {forgotPasswordData} from "../fixtures/user.data";
 
 const forgotPasswordPage = new ForgotPasswordPage();
