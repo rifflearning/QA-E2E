@@ -49,3 +49,11 @@ Cypress.Commands.add('resetPassword', (email) => {
         cy.visit(passwordChangeLink);
     });
 });
+
+Cypress.Commands.add('setCheckbox', {prevSubject: 'element'},(subject, state) => {
+  if (state)
+      cy.wrap(subject).check()
+  else
+      cy.wrap(subject).uncheck()
+})
+

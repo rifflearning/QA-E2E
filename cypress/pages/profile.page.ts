@@ -1,4 +1,4 @@
-import {GeneralPage} from "./general.po";
+import {GeneralPage} from "./general.page";
 
 export class ProfilePage extends GeneralPage{
     get logoutButton() { return cy.contains('Logout')}

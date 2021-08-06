@@ -1,4 +1,4 @@
-import {AbstractPage} from "./abstract.po";
+import {AbstractPage} from "./abstract.page";
 
 export class UnauthorizedPage extends AbstractPage{
     get joinMeetingButton() { return cy.contains('Join a meeting')}

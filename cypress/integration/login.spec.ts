@@ -1,6 +1,6 @@
 import {getUserDefaultData, getUserInvalidData} from "../fixtures/user.data";
-import {LoginPage} from "../pages/login.po";
-import {ProfilePage} from "../pages/profile.po";
+import {LoginPage} from "../pages/login.page";
+import {ProfilePage} from "../pages/profile.page";
 
 const loginPage = new LoginPage();
 const profilePage = new ProfilePage();

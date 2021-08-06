@@ -1,4 +1,4 @@
-import {UnauthorizedPage} from "./unauthorized.po";
+import {UnauthorizedPage} from "./unauthorized.page";
 import {SignUpUserData} from "../types/signup.type";
 import {Timeout} from "../fixtures/enums/timeout.enum";
 

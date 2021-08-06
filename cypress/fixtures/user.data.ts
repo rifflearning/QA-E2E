@@ -4,9 +4,9 @@ import * as faker from "faker";
 //This is test user info, that's not sensitive data
 //TODO: for actual users please use .env approach
 export const getUserDefaultData = (): UserType => ({
-    username: "taras+1@riffanalytics.ai",
+    username: "taras+auto@riffanalytics.ai",
     password: "12341234",
-    name: "Taras 1"
+    name: "Auto Test"
 })
 
 export const getUserInvalidData = (): UserType => ({
