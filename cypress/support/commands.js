@@ -57,3 +57,24 @@ Cypress.Commands.add('setCheckbox', {prevSubject: 'element'},(subject, state) =>
       cy.wrap(subject).uncheck()
 })
 
+Cypress.Commands.add('paste', {prevSubject: true}, (subject, text) => {
+   const clipboardData = new DataTransfer();
+   clipboardData.setData('text/plain', text);
+   const pasteEvent = new ClipboardEvent('paste', {
+       bubbles: true,
+       cancelable: true,
+       dataType: 'text/plain',
+       text,
+       clipboardData
+   });
+   subject[0].dispatchEvent(pasteEvent);
+
+   return subject;
+});
+
+Cypress.Commands.add('verifyClipboardText', (text) => {
+        cy.window().its('navigator.clipboard')
+            .invoke('readText')
+            .should('contain',text)
+})
+

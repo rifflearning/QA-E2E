@@ -23,7 +23,9 @@ export class CreateMeetingPage extends GeneralPage{
 
     fillMeetingForm(meeting: Meeting) {
         this.nameInput.clear().type(meeting.name);
-        meeting.description && this.description.clear().type(meeting.description);
+        meeting.description &&
+        this.description.clear({force: true})
+                        .type(meeting.description, {force: true});
         this.isRecurring.setCheckbox(meeting.isRecurring);
         this.allowAnon.setCheckbox(meeting.allowAnon);
         this.waitForHost.setCheckbox(meeting.waitForHost);
@@ -38,4 +40,5 @@ export class CreateMeetingPage extends GeneralPage{
     cancel() {
         this.cancelButton.click();
     }
+
 }

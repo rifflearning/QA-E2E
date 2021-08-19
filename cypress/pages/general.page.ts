@@ -7,4 +7,10 @@ export class GeneralPage extends AbstractPage {
     open(): void {
         cy.visit("/")
     }
+
+    async getCurrentUrl() {
+        return new Promise<string>(resolve => cy.url().then(url => {
+            resolve(url)
+        }));
+    }
 }
