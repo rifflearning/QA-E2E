@@ -29,7 +29,6 @@ export class MeetingBuilder {
             this.meeting = meeting
         if (prepopulateData) {
             this.meeting.description = faker.random.words(10);
-            this.meeting.isRecurring = faker.datatype.boolean();
             this.meeting.allowAnon = faker.datatype.boolean();
             this.meeting.waitForHost = faker.datatype.boolean();
             this.meeting.forbidNewParticipants = faker.datatype.boolean();
@@ -40,26 +39,32 @@ export class MeetingBuilder {
 
     setDescription(description: string) {
         this.meeting.description = description;
+        return this;
     }
 
     setIsRecurring(isRecurring: boolean) {
         this.meeting.isRecurring = isRecurring;
+        return this;
     }
 
     setAllowAnon(allowAnon: boolean) {
         this.meeting.allowAnon = allowAnon;
+        return this;
     }
 
     setWaitForHost(waitForHost: boolean) {
         this.meeting.waitForHost = waitForHost;
+        return this;
     }
 
     setForbidNewParticipants(forbidNewParticipants: boolean) {
         this.meeting.forbidNewParticipants = forbidNewParticipants;
+        return this;
     }
 
     setMultipleRooms(multipleRooms: boolean) {
         this.meeting.multipleRooms = multipleRooms;
+        return this;
     }
 
     build() {
