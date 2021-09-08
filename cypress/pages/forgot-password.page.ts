@@ -8,6 +8,7 @@ export class ForgotPasswordPage extends UnauthorizedPage{
     get password () { return cy.get('#password')}
     get password2 () { return cy.get('#password2')}
     get alert () { return cy.get('[role="alert"]')}
+    get signUpLink () { return cy.contains('Don\'t have an account? Sign Up')}
 
     open() {
         cy.visit('/app/reset')

@@ -6,7 +6,7 @@ const signUpPage = new SignUpPage();
 const profilePage = new ProfilePage();
 
 describe('Sign-up Tests', () => {
-   it.skip('Sign Up with correct data', () => {
+   it('Sign Up with correct data', () => {
        const signUpData = signupData();
        signUpPage.open();
        signUpPage.completeSignUp(signUpData);

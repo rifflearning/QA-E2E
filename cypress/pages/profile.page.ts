@@ -1,4 +1,7 @@
 import {GeneralPage} from "./general.page";
+import {getUserDefaultData} from "../fixtures/user.data";
+
+const defaultUser = getUserDefaultData();
 
 export class ProfilePage extends GeneralPage{
     get logoutButton() { return cy.contains('Logout')}
@@ -10,7 +13,7 @@ export class ProfilePage extends GeneralPage{
         cy.url().should('include', 'login')
     }
 
-    verifyUserInfo(name: string, email: string) {
+    verifyUserInfo(name = defaultUser.name, email = defaultUser.username) {
         this.name.should('contain.text', name);
         this.email.should('contain.text', email)
     }

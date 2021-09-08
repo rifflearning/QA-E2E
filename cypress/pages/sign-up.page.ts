@@ -10,7 +10,7 @@ export class SignUpPage extends  UnauthorizedPage{
     get consentCheckbox () { return cy.get('[value="agreeTermsAndPolicy"]')}
     get submitButton () { return cy.get('[type="submit"]')}
     get signUpMessage () { return cy.get('h5')}
-
+    get signInLink () { return cy.contains('Already have an account? Sign in')}
     open() {
         cy.visit('/app/signup')
     }
