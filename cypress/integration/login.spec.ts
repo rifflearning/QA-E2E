@@ -1,9 +1,11 @@
 import {getUserDefaultData, getUserInvalidData} from "../fixtures/user.data";
 import {LoginPage} from "../pages/login.page";
 import {ProfilePage} from "../pages/profile.page";
+import {SignUpPage} from "../pages/sign-up.page";
 
 const loginPage = new LoginPage();
 const profilePage = new ProfilePage();
+const signUpPage = new SignUpPage();
 
 describe("Login tests", () => {
     it('Login with default user', () => {
