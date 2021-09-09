@@ -1,18 +1,9 @@
-import {LoginPage} from "../pages/login.page";
-import {CreateMeetingPage} from "../pages/create-meeting.page";
-import {MeetingInfoPage} from "../pages/meeting-info.page";
 import {getMeetingData, getMeetingEditData, getMeetingInputData} from "../fixtures/meeting.data";
-import {MeetingListPage} from "../pages/meeting-list.page";
-import {PreJoinMeetingPage} from "../pages/pre-join-meeting.page";
-import {JoinAMeetingPage} from "../pages/join-a-meeting.page";
-
-const loginPage = new LoginPage();
-const createMeetingPage = new CreateMeetingPage();
-const meetingInfoPage = new MeetingInfoPage();
-const meetingListPage = new MeetingListPage();
-const preJoinMeetingPage = new PreJoinMeetingPage();
-const joinMeetingPage = new JoinAMeetingPage();
-let meetingId;
+import {loginPage} from "../pages/login.page";
+import {createMeetingPage} from "../pages/create-meeting.page";
+import {meetingInfoPage} from "../pages/meeting-info.page";
+import {preJoinMeetingPage} from "../pages/pre-join-meeting.page";
+import {meetingListPage} from "../pages/meeting-list.page";
 
 describe('Meetings Tests', () => {
     beforeEach(() => {

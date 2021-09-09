@@ -18,3 +18,5 @@ export class ProfilePage extends GeneralPage{
         this.email.should('contain.text', email)
     }
 }
+
+export const profilePage = new ProfilePage();

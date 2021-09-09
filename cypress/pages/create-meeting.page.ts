@@ -42,3 +42,5 @@ export class CreateMeetingPage extends GeneralPage{
     }
 
 }
+
+export const createMeetingPage = new CreateMeetingPage();

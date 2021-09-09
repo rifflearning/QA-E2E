@@ -15,3 +15,5 @@ export class MeetingListPage extends GeneralPage{
         cy.contains(meetingName).should('exist');
     }
 }
+
+export const meetingListPage = new MeetingListPage();

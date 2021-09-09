@@ -1,7 +1,5 @@
-import {ForgotPasswordPage} from "../pages/forgot-password.page";
 import {forgotPasswordData} from "../fixtures/user.data";
-
-const forgotPasswordPage = new ForgotPasswordPage();
+import {forgotPasswordPage} from "../pages/forgot-password.page";
 
 describe('Unauthorized User Tests', () => {
     it('Reset password', () => {

@@ -26,3 +26,5 @@ export class UnauthorizedPage extends AbstractPage{
         cy.url().should('contain', '/app/reset')
     }
 }
+
+export const unauthorizedPage = new UnauthorizedPage();

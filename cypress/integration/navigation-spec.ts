@@ -1,16 +1,9 @@
-import {LoginPage} from "../pages/login.page";
-import {ProfilePage} from "../pages/profile.page";
-import {UnauthorizedPage} from "../pages/unauthorized.page";
-import {ForgotPasswordPage} from "../pages/forgot-password.page";
-import {SignUpPage} from "../pages/sign-up.page";
-import {GeneralPage} from "../pages/general.page";
-
-const loginPage = new LoginPage();
-const profilePage = new ProfilePage();
-const unauthorizedPage = new UnauthorizedPage();
-const forgotPasswordPage = new ForgotPasswordPage();
-const signUpPage = new SignUpPage();
-const generalPage = new GeneralPage();
+import {loginPage} from "../pages/login.page";
+import {unauthorizedPage} from "../pages/unauthorized.page";
+import {signUpPage} from "../pages/sign-up.page";
+import {forgotPasswordPage} from "../pages/forgot-password.page";
+import {generalPage} from "../pages/general.page";
+import {profilePage} from "../pages/profile.page";
 
 describe("Navigation tests", () => {
     context('Unauthorized navigation', () => {

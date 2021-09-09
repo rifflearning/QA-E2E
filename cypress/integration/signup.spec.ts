@@ -1,9 +1,6 @@
-import {SignUpPage} from "../pages/sign-up.page";
+import {signUpPage} from "../pages/sign-up.page";
 import {signupData, signupDataWithConfirmationEmail} from "../fixtures/signup.data";
-import {ProfilePage} from "../pages/profile.page";
-
-const signUpPage = new SignUpPage();
-const profilePage = new ProfilePage();
+import {profilePage} from "../pages/profile.page";
 
 describe('Sign-up Tests', () => {
    it('Sign Up with correct data', () => {

@@ -7,3 +7,5 @@ export class PreJoinMeetingPage {
             .should('equal', name);
     }
 }
+
+export const preJoinMeetingPage = new PreJoinMeetingPage();
