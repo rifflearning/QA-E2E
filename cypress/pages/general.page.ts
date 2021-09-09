@@ -39,3 +39,5 @@ export class GeneralPage extends AbstractPage {
         cy.url().should('contain','/app/experimental-dashboard')
     }
 }
+
+export const generalPage = new GeneralPage();

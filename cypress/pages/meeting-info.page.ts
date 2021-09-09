@@ -67,3 +67,5 @@ export class MeetingInfoPage extends GeneralPage {
             this.roomNumber.should('be.visible');
     }
 }
+
+export const meetingInfoPage = new MeetingInfoPage();

@@ -33,3 +33,5 @@ export class SignUpPage extends  UnauthorizedPage{
         this.signUpMessage.should('have.text', 'Please check your email to complete registration.');
     }
 }
+
+export const signUpPage = new SignUpPage();

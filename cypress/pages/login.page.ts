@@ -37,3 +37,4 @@ export class LoginPage extends UnauthorizedPage {
     }
 }
 
+export const loginPage = new LoginPage();

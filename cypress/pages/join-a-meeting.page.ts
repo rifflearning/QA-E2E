@@ -12,3 +12,5 @@ export class JoinAMeetingPage extends GeneralPage{
         this.joinButton.click()
     }
 }
+
+export const joinAMeetingPage = new JoinAMeetingPage();

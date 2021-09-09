@@ -28,3 +28,5 @@ export class ForgotPasswordPage extends UnauthorizedPage{
         this.alert.should('have.text', Messages.PASSWORD_CHANGED)
     }
 }
+
+export const forgotPasswordPage = new ForgotPasswordPage();
