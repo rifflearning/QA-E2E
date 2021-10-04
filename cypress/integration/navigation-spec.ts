@@ -7,7 +7,7 @@ import {profilePage} from "../pages/profile.page";
 
 describe("Navigation tests", () => {
     context('Unauthorized navigation', () => {
-        it('Join a meeting button navigation', () => {
+        it.skip('Join a meeting button navigation', () => {
             loginPage.open();
             loginPage.joinMeetingButton.click();
             unauthorizedPage.verifyJoinMeetingPage()
@@ -51,7 +51,7 @@ describe("Navigation tests", () => {
             loginPage.verifyLogin()
         });
 
-        it('Join a meeting navigation', () => {
+        it.skip('Join a meeting navigation', () => {
             generalPage.joinAMeeting.click();
             generalPage.verifyJoinMeetingPage();
         })

@@ -13,6 +13,7 @@ export interface Meeting {
     waitForHost?: boolean
     forbidNewParticipants?: boolean
     multipleRooms?: boolean
+    personalMeeting?: boolean
 }
 
 export class MeetingBuilder {
@@ -65,6 +66,11 @@ export class MeetingBuilder {
     setMultipleRooms(multipleRooms: boolean) {
         this.meeting.multipleRooms = multipleRooms;
         return this;
+    }
+
+    setPersonalMeeting(personalMeeting: boolean) {
+        this.meeting.personalMeeting = personalMeeting;
+        return this
     }
 
     build() {

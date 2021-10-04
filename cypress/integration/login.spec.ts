@@ -4,7 +4,7 @@ import {profilePage} from "../pages/profile.page";
 
 
 describe("Login tests", () => {
-    it('Login with default user', () => {
+    it('Login with default user - With Data', () => {
         const loginData = getUserDefaultData();
         loginPage.open();
         loginPage.login(loginData.username, loginData.password);

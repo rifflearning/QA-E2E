@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@types/faker": "^5.5.7",
+    "allure-commandline": "^2.13.8",
     "cypress": "^7.6.0",
     "cypress-dotenv": "^1.2.2",
     "dotenv": "^10.0.0",
@@ -12,6 +13,7 @@
   "description": "Riff Learning E2E project",
   "main": "index.js",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.18.0",
     "appium": "^1.21.0",
     "chromedriver": "^90.0.0",
     "cypress-xpath": "^1.6.2",
@@ -20,7 +22,8 @@
   },
   "scripts": {
     "cypress": "npx cypress open",
-    "test": "cypress run --browser chrome"
+    "test": "cypress run --browser chrome",
+    "test-headless": "cypress run --browser chrome --headless"
   },
   "repository": {
     "type": "git",

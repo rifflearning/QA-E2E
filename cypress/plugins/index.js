@@ -15,9 +15,10 @@
 /**
  * @type {Cypress.PluginConfig}
  */
-
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 const dotenvPlugin = require('cypress-dotenv');
 module.exports = (on, config) => {
-    config = dotenvPlugin(config)
-    return config
+    allureWriter(on, config);
+    config = dotenvPlugin(config);
+    return config;
 }
