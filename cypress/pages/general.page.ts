@@ -1,7 +1,7 @@
 import {AbstractPage} from "./abstract.page";
 
 export class GeneralPage extends AbstractPage {
-    get scheduleAMeeting() { return cy.contains('Schedule a meeting')}
+    get scheduleAMeeting() { return cy.contains('Create a meeting')}
     get joinAMeeting() { return cy.contains('Join a meeting')}
     get avatar() { return cy.get('svg[class*="Avatar"]')}
     get profile() { return cy.contains('Profile')}
@@ -24,7 +24,7 @@ export class GeneralPage extends AbstractPage {
     }
 
     verifyScheduleMeetingPage(){
-        cy.url().should('contain','/app/schedule')
+        cy.url().should('contain','/app/create')
     }
 
     verifyMeetingsPage(){

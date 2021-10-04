@@ -21,3 +21,11 @@ export const getMeetingInputData = (): Meeting => {
         .createMeeting(`Meeting ${faker.random.word()} ${faker.random.alphaNumeric(5)}`, true)
         .build()
 }
+
+export const getPersonalMeetingData = (): Meeting => {
+    return meetingBuilder
+        .createMeeting(`Meeting ${faker.random.word()} ${faker.random.alphaNumeric(5)}`)
+        .setDescription(faker.random.words(10))
+        .setPersonalMeeting(true)
+        .build();
+}

@@ -52,9 +52,9 @@ Cypress.Commands.add('resetPassword', (email) => {
 
 Cypress.Commands.add('setCheckbox', {prevSubject: 'element'},(subject, state) => {
   if (state)
-      cy.wrap(subject).check()
+      cy.wrap(subject).check({force: true})
   else
-      cy.wrap(subject).uncheck()
+      cy.wrap(subject).uncheck({force: true})
 })
 
 Cypress.Commands.add('paste', {prevSubject: true}, (subject, text) => {

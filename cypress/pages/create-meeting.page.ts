@@ -3,6 +3,7 @@ import {Meeting} from "../types/meeting.type";
 
 export class CreateMeetingPage extends GeneralPage{
     get nameInput()             { return cy.get('#name')}
+    get personalMeetingTab()    { return cy.contains('Use Personal Meeting Room')}
     get description()           { return cy.get('#description')}
     get datePicker()            { return cy.get('[aria-label="change date"]')}
     get timePicker()            { return cy.get('[aria-label="change time"]')}
@@ -18,19 +19,23 @@ export class CreateMeetingPage extends GeneralPage{
     get cancelButton()          { return cy.contains('Cancel')}
 
     open () {
-        cy.visit('/app/schedule')
+        cy.visit('/app/create')
     }
 
     fillMeetingForm(meeting: Meeting) {
-        this.nameInput.clear().type(meeting.name);
-        meeting.description &&
-        this.description.clear({force: true})
-                        .type(meeting.description, {force: true});
-        this.isRecurring.setCheckbox(meeting.isRecurring);
-        this.allowAnon.setCheckbox(meeting.allowAnon);
-        this.waitForHost.setCheckbox(meeting.waitForHost);
-        this.forbidNewParticipants.setCheckbox(meeting.forbidNewParticipants);
-        this.multipleRooms.setCheckbox(meeting.multipleRooms);
+        if (meeting.personalMeeting) {
+            this.personalMeetingTab.click({force: true});
+        } else {
+            this.nameInput.clear().type(meeting.name);
+            meeting.description &&
+            this.description.clear({force: true})
+                .type(meeting.description, {force: true});
+            this.allowAnon.setCheckbox(meeting.allowAnon);
+            this.waitForHost.setCheckbox(meeting.waitForHost);
+            this.isRecurring.setCheckbox(meeting.isRecurring);
+            this.forbidNewParticipants.setCheckbox(meeting.forbidNewParticipants);
+            this.multipleRooms.setCheckbox(meeting.multipleRooms);
+        }
     }
 
     saveMeeting() {

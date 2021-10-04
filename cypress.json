@@ -1,6 +1,9 @@
 {
-    "baseUrl": "https://dev-jitsi.riffplatform.com/",
+    "baseUrl": "https://trunk.riffremote.com/",
+    "watchForFileChanges": false,
+    "defaultCommandTimeout": 10000,
     "env": {
-        "testEmail": "chcdz.test@inbox.testmail.app"
+        "testEmail": "chcdz.test@inbox.testmail.app",
+        "allure": true
     }
 }

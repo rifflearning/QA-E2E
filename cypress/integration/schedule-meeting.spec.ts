@@ -1,9 +1,19 @@
-import {getMeetingData, getMeetingEditData, getMeetingInputData} from "../fixtures/meeting.data";
+import {
+    getMeetingData,
+    getMeetingEditData,
+    getMeetingInputData,
+    getPersonalMeetingData
+} from "../fixtures/meeting.data";
 import {loginPage} from "../pages/login.page";
 import {createMeetingPage} from "../pages/create-meeting.page";
 import {meetingInfoPage} from "../pages/meeting-info.page";
 import {preJoinMeetingPage} from "../pages/pre-join-meeting.page";
 import {meetingListPage} from "../pages/meeting-list.page";
+
+const meeting = getMeetingData();
+const meetingInput = getMeetingInputData();
+const meetingUpdate = getMeetingEditData();
+const personalMeeting = getPersonalMeetingData();
 
 describe('Meetings Tests', () => {
     beforeEach(() => {
@@ -13,7 +23,6 @@ describe('Meetings Tests', () => {
     });
 
     it('Schedule a meeting', () => {
-        const meeting = getMeetingData();
         createMeetingPage.open();
         createMeetingPage.fillMeetingForm(meeting);
         createMeetingPage.saveMeeting();
@@ -21,16 +30,13 @@ describe('Meetings Tests', () => {
     })
 
     it('Schedule a meeting - Input Data', () => {
-        const meeting = getMeetingInputData();
         createMeetingPage.open();
-        createMeetingPage.fillMeetingForm(meeting);
+        createMeetingPage.fillMeetingForm(meetingInput);
         createMeetingPage.saveMeeting();
-        meetingInfoPage.verifyMeetingData(meeting);
+        meetingInfoPage.verifyMeetingData(meetingInput);
     })
 
     it('Edit Meeting', () => {
-        const meeting = getMeetingData();
-        const meetingUpdate = getMeetingEditData();
         createMeetingPage.open();
         createMeetingPage.fillMeetingForm(meeting);
         createMeetingPage.saveMeeting();
@@ -42,7 +48,6 @@ describe('Meetings Tests', () => {
     })
 
     it('Start a Meeting', () => {
-        const meeting = getMeetingData();
         createMeetingPage.open();
         createMeetingPage.fillMeetingForm(meeting);
         createMeetingPage.saveMeeting();
@@ -50,8 +55,7 @@ describe('Meetings Tests', () => {
         preJoinMeetingPage.verifyUsername();
     })
 
-    it('Copy Meeting link', async () => {
-        const meeting = getMeetingData();
+    it('Copy Meeting link', () => {
         createMeetingPage.open();
         createMeetingPage.fillMeetingForm(meeting);
         createMeetingPage.saveMeeting();
@@ -60,7 +64,6 @@ describe('Meetings Tests', () => {
     })
 
     it('See meetings list', () => {
-        const meeting = getMeetingData();
         createMeetingPage.open();
         createMeetingPage.fillMeetingForm(meeting);
         createMeetingPage.saveMeeting();
@@ -69,12 +72,18 @@ describe('Meetings Tests', () => {
     });
 
     it('Delete Meeting', () => {
-        const meeting = getMeetingData();
         createMeetingPage.open();
         createMeetingPage.fillMeetingForm(meeting);
         createMeetingPage.saveMeeting();
         meetingInfoPage.deleteMeeting();
         meetingListPage.isLoaded();
+    })
+
+    it('Start a Personal Meeting', () => {
+        createMeetingPage.open();
+        createMeetingPage.fillMeetingForm(personalMeeting);
+        meetingInfoPage.startMeeting();
+        preJoinMeetingPage.verifyUsername();
     })
 });
 

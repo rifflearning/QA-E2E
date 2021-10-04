@@ -12,6 +12,7 @@
     },
     "include": [
       "./**/*.ts",
+        "node_modules/@shelex/cypress-allure-plugin/reporter",
       "node_modules/@types/jasmine/index.d.ts",
       "node_modules/cypress/types/cypress-global-vars.d.ts"
     ]
